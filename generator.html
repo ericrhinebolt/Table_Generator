@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link type="text/css" rel="stylesheet" href="/style/style.css" />
+    <title>Table Generator</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <img class="logo" src="/img/logo.png" alt="Table Generator Logo" />
+        <div id="navList">
+          <a href="index.html" class="navBtn navBtnNorm">Home</a>
+          <a href="generator.html" class="navBtn btnHighlight">Generator</a>
+          <a href="contact.html" class="navBtn navBtnNorm">Contact</a>
+        </div>
+      </nav>
+    </header>
+    <div id="boxOne"></div>
+    <div id="boxTwo"></div>
+    <div id="hero">
+      <div id="heroLeft">
+        <h1>Tired of typing out all of your table tags?</h1>
+        <p>
+          Use our generator to create basic tables without the need to type out
+          all of your code. Just make your selections, click generate, and copy
+          and paste.<br />
+          It's that easy!
+        </p>
+      </div>
+      <div id="heroRight">
+        <img
+          src="/img/generatorcrop.jpg"
+          alt="Industrial generator that generates your beautiful tables"
+        />
+      </div>
+    </div>
+
+    <!-- Lower Content -->
+    <div class="lowerContent">
+      <h2>Generator</h2>
+      <p class="conText">
+        Here you can generate your own basic <br />table by making selections
+        below.
+      </p>
+      <form class="sel">
+        <label for="headSel" class="label headLabel">Table Header?</label>
+        <select id="headSel" name="headSel">
+          <option value="No">No</option>
+          <option value="Yes">Yes</option>
+        </select>
+
+        <label for="rowSel" class="label">How many rows?</label>
+        <p id="headInfo" class="noHead">(Not including header)</p>
+        <input type="number" id="rowSel" name="rowSel" />
+        <label for="colSel" class="label">How many columns?</label>
+        <input type="number" id="colSel" name="colSel" />
+        <button type="button" class="subSel">Generate!</button>
+      </form>
+
+      <!-- Generated Tables  -->
+      <div class="genCon noGen">
+        <div class="genBtns">
+          <button class="copyBtn">Copy to Clipboard</button>
+          <button class="downBtn">Download text file</button>
+        </div>
+        <textarea class="textarea" contenteditable></textarea>
+      </div>
+    </div>
+  </body>
+  <script src="/script/script.js"></script>
+</html>
