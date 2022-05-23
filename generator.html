@@ -45,7 +45,7 @@
     </div>
 
     <!-- Lower Content -->
-    <div class="lowerContent">
+    <div class="lowerContent marBot">
       <h2>Generator</h2>
       <p class="conText">
         Here you can generate your own basic <br />table by making selections
@@ -75,6 +75,17 @@
         <textarea class="textarea" contenteditable></textarea>
       </div>
     </div>
+    <footer id="footer">
+      <div id="copyright">
+        <script>
+          document.getElementById("copyright").innerHTML = `
+        <p>
+          Copyright &copy; ${new Date().getFullYear()} Table Generator
+        </p>
+        `;
+        </script>
+      </div>
+    </footer>
   </body>
   <script src="/script/script.js"></script>
 </html>

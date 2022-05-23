@@ -21,6 +21,8 @@ let tableRow;
 let tableCol;
 
 // Functions
+
+// Functions for sizing output textarea
 function autoResize(textBox) {
   textBox.style.height = textBox.scrollHeight + "px";
 }
@@ -28,6 +30,7 @@ function autoShrink(textbox) {
   textbox.style.height = 0 + "px";
 }
 
+// Function for copy to clipboard
 function copyTextToClipboard(text) {
   if (!navigator.clipboard) {
     fallbackCopyTextToClipboard(text);
@@ -43,6 +46,7 @@ function copyTextToClipboard(text) {
   );
 }
 
+// Function for file download
 let textFile = null,
   makeTextFile = function (text) {
     let data = new Blob([text], { type: "text/plain" });

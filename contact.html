@@ -30,15 +30,15 @@
       <div id="heroLeft">
         <h1>Contact Us</h1>
         <p>
-          If you need custom tables with merged cells or anything else, use the
-          form below to contact us.
+          If you have any issues, need custom tables with merged cells, or
+          anything else, use the form below to contact us.
         </p>
       </div>
       <div id="heroRight">
         <img src="/img/contact.jpg" alt="Laptop with code on desk" />
       </div>
     </div>
-    <div class="lowerContent">
+    <div class="lowerContent marBot">
       <form id="conForm">
         <label for="conEmail" class="label">Enter your email.</label>
         <input type="email" id="conEmail" placeholder="contact@mail.com" />
@@ -52,6 +52,17 @@
         <button type="submit" class="subSel">Send</button>
       </form>
     </div>
+    <footer id="footer">
+      <div id="copyright">
+        <script>
+          document.getElementById("copyright").innerHTML = `
+        <p>
+          Copyright &copy; ${new Date().getFullYear()} Table Generator
+        </p>
+        `;
+        </script>
+      </div>
+    </footer>
     <script src="/script/script.js"></script>
   </body>
 </html>
