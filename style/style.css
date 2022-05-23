@@ -357,7 +357,6 @@ nav {
 /* ------------------Footer---------------- */
 #footer {
   display: flex;
-  width: 100vw;
   height: 8rem;
   background-color: #94c595;
   z-index: 999;
