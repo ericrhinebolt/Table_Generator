@@ -175,12 +175,13 @@ nav {
   justify-items: center;
   font-size: 1.6rem;
   border-radius: 20px;
-  width: 70vw;
   margin-top: 20rem;
-  margin-left: 10vw;
   background-color: rgba(148, 197, 149, 0.884);
   padding: 5rem 8rem;
   margin-bottom: 10rem;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .marBox {
@@ -191,6 +192,18 @@ nav {
   font-size: 2.2rem;
   padding-bottom: 2rem;
   text-decoration: underline;
+}
+
+table {
+  width: 80%;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  padding: 1rem;
+  background-color: antiquewhite;
 }
 
 /* -------------Generator-------------- */

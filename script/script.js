@@ -6,7 +6,7 @@ const jsHeadSel = document.getElementById("headSel");
 const colSel = document.getElementById("colSel");
 const rowSel = document.getElementById("rowSel");
 const genCon = document.querySelector(".genCon");
-const subSel = document.querySelector(".subSel");
+const genBtn = document.getElementById("genBtn");
 const textarea = document.querySelector(".textarea");
 const copyBtn = document.querySelector(".copyBtn");
 const downBtn = document.querySelector(".downBtn");
@@ -19,6 +19,13 @@ headRow.setAttribute("id", "tableHeader");
 let tableHead;
 let tableRow;
 let tableCol;
+
+//Email Validation
+
+const mailVal = new RegExp("[a-z0-9]+@[a-z]+\\.[a-z]{2,3}");
+const conBtn = document.getElementById("conBtn");
+const conEmail = document.getElementById("conEmail");
+const conTextBox = document.getElementById("conTextBox");
 
 // Functions
 
@@ -69,8 +76,8 @@ if (jsHeadSel != null) {
 }
 
 // Generator
-if (subSel != null) {
-  subSel.addEventListener("click", function () {
+if (genBtn != null) {
+  genBtn.addEventListener("click", function () {
     // Making Generated content visible
     genCon.classList.remove("noGen");
 
@@ -119,32 +126,55 @@ if (subSel != null) {
 
     // Parsing generated tables into a string, adding line breaks and inputting it into the textarea
     let preHtml = textarea.firstChild.outerHTML;
-    textarea.value = preHtml.replaceAll("><", ">\n<");
+    preHtml = preHtml.replaceAll("><", ">,\n<");
+    let htmlArr = preHtml.split(",");
+    textarea.value = htmlArr.join("");
+    // textarea.value = preHtml.replaceAll("><", ">\n<");
 
     // Running the autoResize function to fit the textbox to the content, no scrolling required!
     autoResize(textarea);
   });
 
   // Copying text to clipboard
-  copyBtn.addEventListener("click", function (event) {
-    copyTextToClipboard(textarea.value);
-  });
+  if (copyBtn != null) {
+    copyBtn.addEventListener("click", function (event) {
+      copyTextToClipboard(textarea.value);
+    });
+  }
 
   // Downloading a text file
-  downBtn.addEventListener(
-    "click",
-    function () {
-      let link = document.createElement("a");
-      link.setAttribute("download", "generated-table.txt");
-      link.href = makeTextFile(textarea.value);
-      document.body.appendChild(link);
+  if (downBtn != null) {
+    downBtn.addEventListener(
+      "click",
+      function () {
+        let link = document.createElement("a");
+        link.setAttribute("download", "generated-table.txt");
+        link.href = makeTextFile(textarea.value);
+        document.body.appendChild(link);
 
-      window.requestAnimationFrame(function () {
-        let event = new MouseEvent("click");
-        link.dispatchEvent(event);
-        document.body.removeChild(link);
-      });
-    },
-    false
-  );
+        window.requestAnimationFrame(function () {
+          let event = new MouseEvent("click");
+          link.dispatchEvent(event);
+          document.body.removeChild(link);
+        });
+      },
+      false
+    );
+  }
+}
+
+// Email Validation
+if (conBtn != null) {
+  conBtn.addEventListener("click", function () {
+    if (mailVal.test(conEmail.value)) {
+      if (conTextBox.value == "") {
+        alert("Please enter a message!");
+      } else if (conTextBox.value != "") {
+        alert("Your message has been sent");
+        location.reload();
+      }
+    } else if (!mailVal.test(conEmail.value)) {
+      alert("Please enter a valid email!");
+    }
+  });
 }
