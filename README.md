@@ -17,7 +17,7 @@ JavaScript. The HTML is then output onto the page, letting you copy and paste th
 
 <hr>
 
-## TECHNICAL SPECS
+### TECHNICAL SPECS
 
 - HTML
 - CSS
@@ -29,7 +29,7 @@ JavaScript. The HTML is then output onto the page, letting you copy and paste th
 <hr>
 <details><summary>
 
-## PROJECT REQUIREMENTS
+### PROJECT REQUIREMENTS
 
 </summary>
 <p>
@@ -67,7 +67,7 @@ JavaScript. The HTML is then output onto the page, letting you copy and paste th
 </details>
 <hr>
 
-## DEVELOPER
+### DEVELOPER
 
 Eric Rhinebolt
 https://github.com/ericrhinebolt
