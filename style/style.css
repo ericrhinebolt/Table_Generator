@@ -374,7 +374,7 @@ td {
 }
 
 #noGrid {
-  display: grid;
+  display: block;
 }
 
 /* ------------------Footer---------------- */
