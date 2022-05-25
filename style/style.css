@@ -373,6 +373,10 @@ td {
   margin: auto;
 }
 
+#noGrid {
+  display: grid;
+}
+
 /* ------------------Footer---------------- */
 #footer {
   display: flex;
