@@ -367,6 +367,11 @@ td {
   margin-bottom: 20rem;
 }
 
+#conBtn {
+  width: 75%;
+  margin: auto;
+}
+
 /* ------------------Footer---------------- */
 #footer {
   display: flex;
