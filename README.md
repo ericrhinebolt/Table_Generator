@@ -1,7 +1,5 @@
 # TABLE GENERATOR
 
-<hr>
-
 Table Generator is a basic but fun project completed for a bootcamp. It lets you specify rows and columns to build an html table using
 JavaScript. The HTML is then output onto the page, letting you copy and paste the code or download as a file, to use for yourself.
 
