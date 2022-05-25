@@ -1,9 +1,9 @@
-TABLE GENERATOR
+#TABLE GENERATOR
 
 Table Generator is a basic but fun project completed for a bootcamp. It lets you specify rows and columns to build an html table using
 JavaScript. The HTML is then output onto the page, letting you copy and paste the code or download as a file, to use for yourself.
 
-INSTRUCTIONS
+##INSTRUCTIONS
 
 1. Navigate to https://tablegenapp.netlify.app/.
 
@@ -15,16 +15,19 @@ INSTRUCTIONS
 4. Below you will see the HTML as well as the "Copy to Clipboard" and "Download text file" buttons. The copy to clipboard button will add the
    entire code to your clipboard for easy pasting. The download text file button will download a text file called "generated-table.txt" directly to your computer for later use.
 
-TECHNICAL SPECS
+<hr>
+##TECHNICAL SPECS
 
-    HTML
-    CSS
-    CSS Grid
-    CSS Flexbox
-    JavaScript
-    Hosted by Netlify
+    - HTML
+    - CSS
+    - CSS Grid
+    - CSS Flexbox
+    - JavaScript
+    - Hosted by Netlify
 
-PROJECT REQUIREMENTS
+<hr>
+<details><summary>##PROJECT REQUIREMENTS</summary>
+<p>
 
 HTML
 
@@ -35,7 +38,7 @@ HTML
       Dropped Down Menu
       Use web fonts
       Use different types of content in the form of text, images, videos, and GIFs
-     Use regex validation
+      Use regex validation
 
 CSS
 
@@ -55,7 +58,10 @@ Javascript
       Use JSON or XML (Optional)
       Use JQuery (Optional)
 
-DEVELOPER
+</p>
+</details>
+<hr>
+##DEVELOPER
 
 Eric Rhinebolt
 https://github.com/ericrhinebolt
