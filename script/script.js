@@ -172,6 +172,8 @@ if (conBtn != null) {
       } else if (conTextBox.value != "") {
         alert("Your message has been sent");
         location.reload();
+        conTextBox.value = "";
+        conEmail.value = "";
       }
     } else if (!mailVal.test(conEmail.value)) {
       alert("Please enter a valid email!");

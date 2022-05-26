@@ -15,29 +15,53 @@
   table {
     width: 100%;
   }
-  /* 
-  #conForm {
-    width: 2000px;
-  } */
-}
 
-/* **************************** */
-/* BELOW 920PX */
-/* **************************** */
-@media (max-width: 57.5em) {
+  #conForm {
+    width: 100%;
+  }
+
+  .marBot {
+    display: block;
+  }
+
+  .genCon {
+    width: 100%;
+  }
+
+  .textarea {
+    width: 50vw;
+  }
 }
 
 /* **************************** */
 /* BELOW 780PX */
 /* **************************** */
 @media (max-width: 48.75em) {
-}
+  .logo {
+    display: none;
+  }
 
-/* **************************** */
-/* BELOW 600PX */
-/* **************************** */
+  #navList {
+    margin: 0;
+    width: 100%;
+  }
 
-@media (max-width: 37.5em) {
+  .navBtn {
+    font-size: 2.5rem;
+  }
+
+  .navBtn:last-of-type {
+    margin-right: 0px;
+  }
+
+  #heroRight img {
+    width: 100%;
+    margin: 0 5% 0 4%;
+  }
+
+  /* .textarea {
+    width: 60vw;
+  } */
 }
 
 /* **************************** */
@@ -45,6 +69,42 @@
 /* **************************** */
 
 @media (max-width: 32.8125em) {
+  .navBtn {
+    font-size: 1.6rem;
+    margin: 0;
+  }
+
+  #hero {
+    margin-top: 13rem;
+  }
+
+  #heroLeft {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .lowerContent {
+    margin: 1rem;
+    margin-top: 5rem;
+    padding: 3rem 1rem;
+    width: 90%;
+  }
+
+  .lowerContent h2 {
+    text-align: center;
+  }
+
+  .marBox {
+    margin-bottom: 10rem;
+  }
+
+  #footer {
+    margin-top: 10rem;
+  }
+
+  .textarea {
+    width: 80vw;
+  }
 }
 
 /* **************************** */

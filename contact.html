@@ -4,20 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Linking Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:wght@700&display=swap"
       rel="stylesheet"
     />
+    <!-- Linking stylesheets -->
     <link type="text/css" rel="stylesheet" href="/style/style.css" />
     <link type="text/css" rel="stylesheet" href="/style/media.css" />
     <title>Table Generator</title>
   </head>
   <body>
+    <!-- Navigation -->
     <header>
       <nav>
-        <img class="logo" src="/img/logo.png" alt="Table Generator Logo" />
+        <a href="index.html">
+          <img class="logo" src="/img/logo.png" alt="Table Generator Logo" />
+        </a>
         <div id="navList">
           <a href="index.html" class="navBtn navBtnNorm">Home</a>
           <a href="generator.html" class="navBtn btnHighlight">Generator</a>
@@ -25,8 +30,12 @@
         </div>
       </nav>
     </header>
+
+    <!-- Absolute boxes in the background -->
     <div id="boxOne"></div>
     <div id="boxTwo"></div>
+
+    <!-- Main Section -->
     <div id="hero">
       <div id="heroLeft">
         <h1>Contact Us</h1>
@@ -39,6 +48,8 @@
         <img src="/img/contact.jpg" alt="Laptop with code on desk" />
       </div>
     </div>
+
+    <!-- Lower Content -->
     <div class="lowerContent marBot" id="noGrid">
       <form id="conForm" netlify>
         <label for="conEmail" class="label">Enter your email.</label>
@@ -53,7 +64,10 @@
         <button type="button" id="conBtn" class="subSel">Send</button>
       </form>
     </div>
+
+    <!-- Bottom Footer -->
     <footer id="footer">
+      <!-- Gets current year -->
       <div id="copyright">
         <script>
           document.getElementById("copyright").innerHTML = `

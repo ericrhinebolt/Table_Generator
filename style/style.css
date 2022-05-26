@@ -31,8 +31,6 @@ body {
   margin: 1rem;
   margin-left: 3rem;
   padding: 1rem;
-  /* background-color: #94c595;
-  border-radius: 10px; */
 }
 
 nav {
@@ -102,7 +100,7 @@ nav {
 }
 
 #heroLeft {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   padding-top: 3rem;
   padding-left: 5rem;
   padding-right: 5rem;
@@ -115,7 +113,9 @@ nav {
 
 #heroLeft p {
   margin-top: 5rem;
-  font-size: 1.6rem;
+  font-size: 1.9rem;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 #heroRight {
