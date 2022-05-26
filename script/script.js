@@ -164,6 +164,23 @@ if (genBtn != null) {
   }
 }
 
+if (conBtn != null) {
+  conBtn.addEventListener("click", function () {
+    if (mailVal.test(conEmail.value)) {
+      if (conTextBox.value == "") {
+        alert("Please enter a message!");
+      } else if (conTextBox.value != "") {
+        alert("Your message has been sent");
+        location.reload();
+        conTextBox.value = "";
+        conEmail.value = "";
+      }
+    } else if (!mailVal.test(conEmail.value)) {
+      alert("Please enter a valid email!");
+    }
+  });
+}
+
 // Email Validation
 // conForm?.addEventListener("submit", function (e) {
 //   if (mailVal.test(conEmail.value)) {
@@ -192,26 +209,26 @@ if (genBtn != null) {
 //     .catch((error) => alert(error));
 // };
 
-conForm?.addEventListener("submit", function (e) {
-  if (mailVal.test(conEmail.value)) {
-    if (conTextBox.value == "") {
-      alert("Please enter a message!");
-      e.preventDefault();
-    } else if (conTextBox.value != "") {
-      let formData = new FormData(conForm);
-      fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData).toString(),
-      })
-        .then(
-          () => console.log("Form successfully submitted"),
-          alert("Your message has been sent")
-        )
-        .catch((error) => alert(error));
-    }
-  } else if (!mailVal.test(conEmail.value)) {
-    alert("Please enter a valid email!");
-    e.preventDefault();
-  }
-});
+// conForm?.addEventListener("submit", function (e) {
+//   if (mailVal.test(conEmail.value)) {
+//     if (conTextBox.value == "") {
+//       alert("Please enter a message!");
+//       e.preventDefault();
+//     } else if (conTextBox.value != "") {
+//       let formData = new FormData(conForm);
+//       fetch("/", {
+//         method: "POST",
+//         headers: { "Content-Type": "application/x-www-form-urlencoded" },
+//         body: new URLSearchParams(formData).toString(),
+//       })
+//         .then(
+//           () => console.log("Form successfully submitted"),
+//           alert("Your message has been sent")
+//         )
+//         .catch((error) => alert(error));
+//     }
+//   } else if (!mailVal.test(conEmail.value)) {
+//     alert("Please enter a valid email!");
+//     e.preventDefault();
+//   }
+// });
