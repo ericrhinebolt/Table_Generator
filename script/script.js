@@ -10,6 +10,7 @@ const genBtn = document.getElementById("genBtn");
 const textarea = document.querySelector(".textarea");
 const copyBtn = document.querySelector(".copyBtn");
 const downBtn = document.querySelector(".downBtn");
+const conForm = document.getElementById("conForm");
 
 // Creating Elements
 const table = document.createElement("table");
@@ -164,18 +165,17 @@ if (genBtn != null) {
 }
 
 // Email Validation
-if (conBtn != null) {
-  conBtn.addEventListener("click", function () {
+if (conForm != null) {
+  conForm.addEventListener("submit", function (e) {
     if (mailVal.test(conEmail.value)) {
       if (conTextBox.value == "") {
+        e.preventDefault();
         alert("Please enter a message!");
       } else if (conTextBox.value != "") {
         alert("Your message has been sent");
-        location.reload();
-        conTextBox.value = "";
-        conEmail.value = "";
       }
     } else if (!mailVal.test(conEmail.value)) {
+      e.preventDefault();
       alert("Please enter a valid email!");
     }
   });
