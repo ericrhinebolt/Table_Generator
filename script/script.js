@@ -165,18 +165,16 @@ if (genBtn != null) {
 }
 
 // Email Validation
-if (conForm != null) {
-  conForm.addEventListener("submit", function (e) {
-    if (mailVal.test(conEmail.value)) {
-      if (conTextBox.value == "") {
-        e.preventDefault();
-        alert("Please enter a message!");
-      } else if (conTextBox.value != "") {
-        alert("Your message has been sent");
-      }
-    } else if (!mailVal.test(conEmail.value)) {
+conForm?.addEventListener("submit", function (e) {
+  if (mailVal.test(conEmail.value)) {
+    if (conTextBox.value == "") {
+      alert("Please enter a message!");
       e.preventDefault();
-      alert("Please enter a valid email!");
+    } else if (conTextBox.value != "") {
+      alert("Your message has been sent");
     }
-  });
-}
+  } else if (!mailVal.test(conEmail.value)) {
+    alert("Please enter a valid email!");
+    e.preventDefault();
+  }
+});
